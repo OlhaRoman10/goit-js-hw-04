@@ -64,5 +64,5 @@ const bookShelf = {
 
 bookShelf.getAvarageRating(); // 7
 console.log(bookShelf.getAvarageRating());
-changeRating("The Mist", 9);
+bookShelf.changeRating("The Mist", 9);
 console.log(bookShelf.getAvarageRating()); // 8.5
