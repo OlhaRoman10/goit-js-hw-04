@@ -52,7 +52,17 @@ const bookShelf = {
 
     return totalRating / this.books.length;
   },
+  changeRating(bookName, newRating) {
+    for (const book of this.books) {
+      if (book.title === bookName) {
+        book.rating = newRating;
+        break;
+      }
+    }
+  }
 };
 
 bookShelf.getAvarageRating(); // 7
 console.log(bookShelf.getAvarageRating());
+changeRating("The Mist", 9);
+console.log(bookShelf.getAvarageRating()); // 8.5
