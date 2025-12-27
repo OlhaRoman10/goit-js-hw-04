@@ -55,3 +55,4 @@ const bookShelf = {
 };
 
 bookShelf.getAvarageRating(); // 7
+console.log(bookShelf.getAvarageRating());
