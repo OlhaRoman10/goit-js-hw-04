@@ -21,3 +21,19 @@ for (const key of keys) {
 }
 // "author", "genres", "rating"
 // "Bernard Cornwell", ["historical prose", "adventure"], 8.38
+
+const bookShelf = {
+  books: [
+		{ title: "The Last Kingdom", rating: 8 }, 
+		{ title: "The Mist", rating: 6 }
+	],
+  getBooks() {
+    return this.books;
+  },
+  addBook(newBook) {
+    this.books.push(newBook);
+  }
+};
+
+bookShelf.addBook({ title: "Dream Guardian", rating: 9 });
+console.log(bookShelf.getBooks());
