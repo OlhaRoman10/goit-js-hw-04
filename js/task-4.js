@@ -66,3 +66,22 @@ bookShelf.getAvarageRating(); // 7
 console.log(bookShelf.getAvarageRating());
 bookShelf.changeRating("The Mist", 9);
 console.log(bookShelf.getAvarageRating()); // 8.5
+
+function addOverNum(value, ...args) {
+  let total = 0;
+  for (const num of args) {
+    if (num > value) {
+      total += num;
+    }
+  }
+  return total;
+}
+console.log(addOverNum(10, 12, 4, 11, 48, 10, 8)); // 71
+
+function getExtremeScores(scores) {
+  return {
+    best: Math.max(...scores), 
+    worst: Math.min(...scores),
+};
+}
+console.log(getExtremeScores([1, 2, 3, 4, 5])); // { best: 5, worst: 1 }  
