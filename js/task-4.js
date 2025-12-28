@@ -90,4 +90,22 @@ const firstGroupScores = [64, 42, 93];
 const secondGroupScores = [89, 14, 51, 26];
 const thirdGroupScores = [29, 47, 18, 97, 81];
 const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
-console.log(allScores); // [64, 42, 93, 89, 14, 51, 26, 29, 47, 18, 97, 81] 
+console.log(allScores); // [64, 42, 93, 89, 14, 51, 26, 29, 47, 18, 97, 81]
+
+const defaultSettings = {
+  theme: "light",
+  public: true,
+  withPassword: false,
+  minNumberOfQuestions: 10,
+  timePerQuestion: 60,
+};
+const overrideSettings = {
+  public: false,
+  withPassword: true,
+  timePerQuestion: 30,
+};
+
+const finalSettings = { ...defaultSettings, ...overrideSettings };
+console.log(finalSettings);
+// {
+//   theme: "light",              
